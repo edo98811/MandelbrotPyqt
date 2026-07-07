@@ -33,7 +33,7 @@ class Canvas(QLabel):
         self.qimg = self.renderer.black_image(width, height)
         self.update_canvas()
 
-        self.state.changed.connect(self._schedule_render)
+        self.state.changed.connect(self.update_canvas)
         self.update()
 
     def _render_size(self):
@@ -44,11 +44,6 @@ class Canvas(QLabel):
     def paintEvent(self, event):
         painter = QPainter(self)
         painter.drawImage(self.rect(), self.qimg)
-
-    def _schedule_render(self):
-        if not self._render_timer.isActive():
-            self.update_canvas()      # leading edge: render immediately
-        self._render_timer.start(16)  # trailing edge: catch up once input settles
 
     def update_canvas(self):
         width, height = self._render_size()
