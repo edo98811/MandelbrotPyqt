@@ -29,15 +29,6 @@ cd app
 python main.py
 ```
 
-## Docker
-
-A `Dockerfile` is provided with the system libraries PyQt6 needs on Linux, plus `xvfb` for running headlessly:
-
-```bash
-docker build -t mandelbrot-pyqt .
-docker run -it mandelbrot-pyqt
-```
-
 ## Project structure
 
 ```
