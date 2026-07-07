@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/edoardofilippi/Development/MandelbrotPyqt/app/ui /Users/edoardofilippi/Development/MandelbrotPyqt/app/core /Users/edoardofilippi/Development/MandelbrotPyqt/app/model)",
+      "Bash(grep \"\\\\.py$\")"
+    ],
+    "additionalDirectories": [
+      "/Users/edoardofilippi/Development/MandelbrotPyqt/app"
+    ]
+  }
+}
