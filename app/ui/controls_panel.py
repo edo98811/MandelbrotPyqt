@@ -45,8 +45,8 @@ class ControlsPanel(QWidget):
         # self.move_left_button = QPushButton("←")
         # self.move_right_button = QPushButton("→")
 
-        self.zoom_in_button.clicked.connect(lambda: self.update_field("zoom", self.state.zoom + 5))
-        self.zoom_out_button.clicked.connect(lambda: self.update_field("zoom", self.state.zoom - 5))
+        self.zoom_in_button.clicked.connect(lambda: self.update_field("zoom", self.state.zoom * 1.1))
+        self.zoom_out_button.clicked.connect(lambda: self.update_field("zoom", self.state.zoom / 1.1))
         # self.move_up_button.clicked.connect(lambda: self.update_field("center_y", self.state.center_y + 0.1))
         # self.move_down_button.clicked.connect(lambda: self.update_field("center_y", self.state.center_y - 0.1))
         # self.move_left_button.clicked.connect(lambda: self.update_field("center_x", self.state.center_x - 0.1))
